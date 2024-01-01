@@ -35,11 +35,24 @@
     }
 
     .icons {
-      margin-right: 15px;
-
-      .img {
-        cursor: pointer;
-      }
-    }
-  }
+        margin-right: 15px;
+        display: flex;
+        input{
+            border: none;
+            height: 25px;
+            width: 250px;
+            margin-right: 15px;
+            border-radius: 5px;
+            &::placeholder{
+                padding-left: 10px;
+            }
+            &:focus{
+                padding-left: 5px;
+                outline: none;
+            }
+            
+        }
+     
+    }   
+  } 
 }

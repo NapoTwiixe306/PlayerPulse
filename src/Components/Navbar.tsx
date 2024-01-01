@@ -7,9 +7,14 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
   };
 
   return (
@@ -29,8 +34,16 @@ export default function Navbar() {
             <Link href="/pages/events">{List_Navbar[3].items}</Link>
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
           </div>
-          <div className="icons" onClick={toggleMenu}>
-            <Image src={search} alt="Search Icons" className="img" />
+          <div className="icons">
+            
+            {showSearch && (
+              <div className="input ">
+                <input type="search" name="" id="" placeholder="Search"/>
+              </div>
+            )}
+            <div onClick={toggleSearch}>
+              <Image src={search} alt="Search Icons" className="img" />
+            </div>
           </div>
           
         </nav>
