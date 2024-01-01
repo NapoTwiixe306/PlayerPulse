@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function page() {
-  return (
-    <div>Le slug</div>
-  )
+  return <div>Le slug</div>;
 }

@@ -1,6 +1,8 @@
-body{
-    background: #1A1A1A;
+body {
+  background: #1a1a1a;
 }
-@import './base/reset.scss';
+@import "./base/reset.scss";
 
-@import './Components/navbar.scss';
+@import "./Views/Home.scss";
+
+@import "./Components/navbar.scss";

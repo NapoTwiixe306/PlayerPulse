@@ -15,10 +15,13 @@ npx prisma db push
 ```
 
 ## si modifications dans le schema.prisma
+
 ```bash
 npx prisma migrate dev --name init
 ```
+
 ## vérifier que tout est good
+
 ```bash
 npx prisma studio
 ```
