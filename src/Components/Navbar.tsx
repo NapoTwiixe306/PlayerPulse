@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { List_Navbar } from "../ListText/List_Navbar";
 import search from "../img/icons/searc.svg";
@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="burgerButton" onClick={toggleMenu}>
             ☰
           </div>
-          
+
           <div className={`items ${showMenu ? "open" : ""}`}>
             <Link href="/pages/players">{List_Navbar[1].items}</Link>
             <Link href="/pages/team">{List_Navbar[2].items}</Link>
@@ -35,17 +35,15 @@ export default function Navbar() {
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
           </div>
           <div className="icons">
-            
             {showSearch && (
               <div className="input ">
-                <input type="search" name="" id="" placeholder="Search"/>
+                <input type="search" name="" id="" placeholder="Search" />
               </div>
             )}
             <div onClick={toggleSearch}>
               <Image src={search} alt="Search Icons" className="img" />
             </div>
           </div>
-          
         </nav>
       </header>
     </>

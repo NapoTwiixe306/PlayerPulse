@@ -1,6 +1,7 @@
 import React from "react";
 import "../src/scss/App.scss";
 import Navbar from "@/src/Components/Navbar";
+import Carousel from "@/src/Components/Widget/Carousel";
 export default function page() {
   return (
     <>
@@ -13,6 +14,9 @@ export default function page() {
             périphériques ultimes.
           </h1>
         </div>
+      </div>
+      <div className="Section-Two">
+        <Carousel />
       </div>
     </>
   );

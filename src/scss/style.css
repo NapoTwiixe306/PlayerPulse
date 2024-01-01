@@ -1,10 +1,12 @@
 body {
-  background: #1a1a1a; }
+  background: #1a1a1a;
+}
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /*Views*/
 .Home_Container {
@@ -13,17 +15,55 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; }
-  .Home_Container .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%; }
-    .Home_Container .title h1 {
-      width: 60%;
-      text-align: center;
-      font-size: 35px; }
+  background-attachment: fixed;
+}
+.Home_Container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.Home_Container .title h1 {
+  width: 60%;
+  text-align: center;
+  font-size: 35px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.Section-Two .logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: #292929;
+  white-space: nowrap;
+  position: relative;
+}
+.Section-Two .logos:before,
+.Section-Two .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.Section-Two .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+.Section-Two .logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+.Section-Two .logos-slide img {
+  height: 150px;
+}
 
 /*Widget*/
 .Navbar_Container {
@@ -31,40 +71,51 @@ body {
   height: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  .Navbar_Container .burgerButton {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer; }
-  .Navbar_Container .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .Navbar_Container .content .title {
-      margin-left: 15px; }
-    .Navbar_Container .content .items {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px; }
-      .Navbar_Container .content .items a {
-        transition: 0.3s; }
-        .Navbar_Container .content .items a:hover {
-          color: #ccc; }
-    .Navbar_Container .content .icons {
-      margin-right: 15px;
-      display: flex; }
-      .Navbar_Container .content .icons input {
-        border: none;
-        height: 25px;
-        width: 250px;
-        margin-right: 15px;
-        border-radius: 5px; }
-        .Navbar_Container .content .icons input::placeholder {
-          padding-left: 10px; }
-        .Navbar_Container .content .icons input:focus {
-          padding-left: 5px;
-          outline: none; }
+  justify-content: center;
+}
+.Navbar_Container .burgerButton {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.Navbar_Container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Navbar_Container .content .title {
+  margin-left: 15px;
+}
+.Navbar_Container .content .items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.Navbar_Container .content .items a {
+  transition: 0.3s;
+}
+.Navbar_Container .content .items a:hover {
+  color: #ccc;
+}
+.Navbar_Container .content .icons {
+  margin-right: 15px;
+  display: flex;
+}
+.Navbar_Container .content .icons input {
+  border: none;
+  height: 25px;
+  width: 250px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.Navbar_Container .content .icons input::placeholder {
+  padding-left: 10px;
+}
+.Navbar_Container .content .icons input:focus {
+  padding-left: 5px;
+  outline: none;
+}
 
 /*Responsive*/
 @media screen and (max-width: 767px) {
@@ -75,7 +126,8 @@ body {
     cursor: pointer;
     position: absolute;
     right: 25px;
-    top: 7px; }
+    top: 7px;
+  }
   .Navbar_Container .content .items {
     display: none;
     flex-direction: column;
@@ -85,19 +137,27 @@ body {
     width: 100%;
     background-color: #1a1a1a;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
   .Navbar_Container .content .items.open {
-    display: flex; }
+    display: flex;
+  }
   .Navbar_Container .content .items a {
     display: block;
-    padding: 0.5rem 0; }
+    padding: 0.5rem 0;
+  }
   .Navbar_Container .content .icons {
-    display: none; }
+    display: none;
+  }
 
   .Home_Container .title h1 {
-    width: 100%; } }
+    width: 100%;
+  }
+}
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .Navbar_Container .content .title {
-    color: red; } }
+    color: red;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
