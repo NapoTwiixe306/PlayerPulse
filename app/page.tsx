@@ -1,10 +1,11 @@
 import React from 'react'
 import '../src/scss/App.scss'
+import Navbar from '@/src/Components/Navbar'
 export default function page() {
   return (
     <>
-      <div>
-        <h1>PlayerPulse</h1>
+    <Navbar/>
+      <div className="container">
       </div>
     </>
   )

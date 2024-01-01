@@ -1,3 +1,6 @@
-h1{
-    color: red;
+body{
+    background: #1A1A1A;
 }
+@import './base/reset.scss';
+
+@import './Components/navbar.scss';

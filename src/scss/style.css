@@ -1,4 +1,35 @@
-h1 {
-  color: red; }
+body {
+  background: #1A1A1A; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.Navbar_Container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .Navbar_Container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .Navbar_Container .content .title {
+      margin-left: 15px; }
+    .Navbar_Container .content .items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px; }
+      .Navbar_Container .content .items a {
+        transition: 0.3s; }
+        .Navbar_Container .content .items a:hover {
+          color: #ccc; }
+    .Navbar_Container .content .icons {
+      margin-right: 15px; }
+      .Navbar_Container .content .icons .img {
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
