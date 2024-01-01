@@ -3,6 +3,12 @@ body {
 }
 @import "./base/reset.scss";
 
+/*Views*/
 @import "./Views/Home.scss";
 
+/*Widget*/
 @import "./Components/navbar.scss";
+
+/*Responsive*/
+@import "./Responsive/Mobile.scss";
+@import "./Responsive/Tablet.scss";
