@@ -12,24 +12,21 @@ export default function page() {
           <h1>{Home_Text[0].explo}</h1>
         </div>
       </div>
-      <div className="Section-Two"><Carousel /></div>
+      <div className="Section-Two">{/*<Carousel />*/}</div>
       <div className="Section-Three">
         <div className="why">
           <div className="content">
             <h1>{Home_Text[1].why}</h1>
             <div className="list">
               <ul>
-                <li>Statistiques de nombreux joueurs</li>
-                <li>Calendrier précis des évènements</li>
-                <li>Bracket en live</li>
-                <li>totalement gratuit (avec des fonctionnalités payantes)</li>
+              {Home_Text.slice(2, 6).map((text, index) => (
+                <li key={index}>{text.list}</li>
+              ))}
               </ul>
               <ul>
-                <li>Billetteries des events</li>
-                <li>
-                  Possibilité d’être notifié des events depuis l’extension
-                </li>
-                <li>Et pleins d’autres....</li>
+              {Home_Text.slice(6, 9).map((text, index) => (
+                <li key={index}>{text.list}</li>
+              ))}
               </ul>
             </div>
           </div>

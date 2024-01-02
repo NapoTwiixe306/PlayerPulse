@@ -78,6 +78,8 @@ body {
           font-weight: bold;
           font-size: 25px;
           width: 450px; }
+          .Section-Three .why .content .list ul li {
+            margin-bottom: 25px; }
 
 /*Widget*/
 .Navbar_Container {
