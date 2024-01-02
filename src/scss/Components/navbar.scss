@@ -7,11 +7,13 @@
   position: fixed;
   background-color: #1a1a1a62;
   backdrop-filter: blur(50px);
+
   .burgerButton {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
   }
+
   .content {
     display: flex;
     align-items: center;
@@ -40,7 +42,8 @@
       margin-right: 15px;
       display: flex;
       cursor: pointer;
-      a{
+
+      a {
         margin-right: 15px;
         transition: 0.3s;
 
@@ -48,20 +51,82 @@
           color: #ccc;
         }
       }
+
       input {
         border: none;
         height: 25px;
         width: 250px;
         margin-right: 15px;
         border-radius: 5px;
+
         &::placeholder {
           padding-left: 10px;
         }
+
         &:focus {
           padding-left: 5px;
           outline: none;
         }
       }
     }
+  }
+
+  &.open {
+    .burgerButton {
+      display: block;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: #1a1a1a62;
+      padding: 10px;
+    }
+  }
+  
+  .team-link {
+    position: relative;
+    a{
+      cursor: pointer;
+    }
+  }
+
+  .team-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a62;
+    padding: 10px;
+    display: none;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        margin-bottom: 5px;
+        
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          
+          &:hover {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+
+  .team-link:hover .team-list {
+    display: block;
   }
 }

@@ -1,14 +1,19 @@
-"use client";
-import React, { useState } from "react";
+"use client"
+import React, { useState, useEffect } from "react";
 import { List_Navbar } from "../ListText/List_Navbar";
 import search from "../img/icons/searc.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [showTeamList, setShowTeamList] = useState(false);
 
+  const teams = ["Vitality", "Karmine Corp", "BDS"]; // Liste d'équipes fictive
+  const router = useRouter();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -16,6 +21,18 @@ export default function Navbar() {
   const toggleSearch = () => {
     setShowSearch(!showSearch);
   };
+
+  const toggleTeamList = () => {
+    setShowTeamList(!showTeamList);
+  };
+  const navigateToTeam = (team: string) => {
+    router.push(`/pages/team/${team.toLowerCase()}`);
+    setShowTeamList(false);
+  };
+
+  useEffect(() => {
+    setShowTeamList(false);
+  }, [showMenu]);
 
   return (
     <>
@@ -30,7 +47,24 @@ export default function Navbar() {
 
           <div className={`items ${showMenu ? "open" : ""}`}>
             <Link href="/pages/players">{List_Navbar[1].items}</Link>
+            <div
+            onMouseEnter={toggleTeamList}
+            onMouseLeave={toggleTeamList}
+            className="team-link"
+          >
             <Link href="/pages/team">{List_Navbar[2].items}</Link>
+            {showTeamList && (
+              <div className="team-list">
+                <ul>
+                  {teams.map((team, index) => (
+                    <li key={index} onClick={() => navigateToTeam(team)}>
+                      <a>{team}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
             <Link href="/pages/events">{List_Navbar[3].items}</Link>
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
           </div>
