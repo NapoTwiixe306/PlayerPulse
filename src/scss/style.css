@@ -58,6 +58,27 @@ body {
 .Section-Two .logos-slide img {
   height: 150px; }
 
+.Section-Three {
+  height: 35vh; }
+  .Section-Three .why {
+    display: flex;
+    justify-content: center; }
+    .Section-Three .why .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px; }
+      .Section-Three .why .content .list {
+        display: flex;
+        align-items: center; }
+        .Section-Three .why .content .list ul {
+          margin-top: 50px;
+          margin-right: 50px;
+          font-weight: bold;
+          font-size: 25px;
+          width: 450px; }
+
 /*Widget*/
 .Navbar_Container {
   width: 100%;
@@ -86,7 +107,8 @@ body {
           color: #ccc; }
     .Navbar_Container .content .icons {
       margin-right: 15px;
-      display: flex; }
+      display: flex;
+      cursor: pointer; }
       .Navbar_Container .content .icons input {
         border: none;
         height: 25px;
