@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  position: fixed;
+  background-color: #1a1a1a62;
+  backdrop-filter: blur(50px);
   .burgerButton {
     display: none;
     font-size: 1.5rem;
@@ -38,6 +40,14 @@
       margin-right: 15px;
       display: flex;
       cursor: pointer;
+      a{
+        margin-right: 15px;
+        transition: 0.3s;
+
+        &:hover {
+          color: #ccc;
+        }
+      }
       input {
         border: none;
         height: 25px;

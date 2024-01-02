@@ -35,6 +35,8 @@ export default function Navbar() {
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
           </div>
           <div className="icons">
+            <Link href="/auth/login">Login</Link>
+            <Link href="/auth/register">Register</Link>
             {showSearch && (
               <div className="input ">
                 <input type="search" name="" id="" placeholder="Search" />

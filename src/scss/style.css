@@ -87,7 +87,10 @@ body {
   height: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  position: fixed;
+  background-color: #1a1a1a62;
+  backdrop-filter: blur(50px); }
   .Navbar_Container .burgerButton {
     display: none;
     font-size: 1.5rem;
@@ -111,6 +114,11 @@ body {
       margin-right: 15px;
       display: flex;
       cursor: pointer; }
+      .Navbar_Container .content .icons a {
+        margin-right: 15px;
+        transition: 0.3s; }
+        .Navbar_Container .content .icons a:hover {
+          color: #ccc; }
       .Navbar_Container .content .icons input {
         border: none;
         height: 25px;
