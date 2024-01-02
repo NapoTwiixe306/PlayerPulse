@@ -67,10 +67,11 @@ export default function Navbar() {
           </div>
             <Link href="/pages/events">{List_Navbar[3].items}</Link>
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
-          </div>
-          <div className="icons">
             <Link href="/auth/login">Login</Link>
             <Link href="/auth/register">Register</Link>
+          </div>
+          <div className="icons">
+           
             {showSearch && (
               <div className="input ">
                 <input type="search" name="" id="" placeholder="Search" />

@@ -6,4 +6,17 @@
       }
     }
   }
+
+  .Section-Three{
+    .why {
+      .content {
+        .list {
+          flex-direction: column;
+          ul {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
 }

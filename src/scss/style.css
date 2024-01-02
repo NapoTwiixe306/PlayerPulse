@@ -198,9 +198,22 @@ body {
     display: none; }
 
   .Home_Container .title h1 {
-    width: 100%; } }
+    width: 100%; }
+
+  .Section-Three .why .content .list {
+    flex-direction: column; }
+    .Section-Three .why .content .list ul {
+      margin-left: 100px;
+      width: auto; }
+      .Section-Three .why .content .list ul li {
+        margin-bottom: 15px; } }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .Navbar_Container .content .title {
-    color: red; } }
+    color: red; }
+
+  .Section-Three .why .content .list {
+    flex-direction: column; }
+    .Section-Three .why .content .list ul {
+      margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

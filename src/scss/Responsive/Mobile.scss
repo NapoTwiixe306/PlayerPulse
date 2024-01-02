@@ -43,4 +43,22 @@
       }
     }
   }
+  .Section-Three{
+    .why {
+      .content {
+        .list {
+          flex-direction: column;
+
+          ul {
+            margin-left: 100px;
+            width: auto;
+
+            li {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
