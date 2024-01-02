@@ -12,7 +12,7 @@ export default function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const [showTeamList, setShowTeamList] = useState(false);
 
-  const teams = ["Vitality", "Karmine Corp", "BDS"]; // Liste d'équipes fictive
+  const teams = ["Vitality", "KCorp", "BDS"]; 
   const router = useRouter();
   const toggleMenu = () => {
     setShowMenu(!showMenu);

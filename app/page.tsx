@@ -12,7 +12,10 @@ export default function page() {
           <h1>{Home_Text[0].explo}</h1>
         </div>
       </div>
-      <div className="Section-Two">{/*<Carousel />*/}</div>
+      <div className="Section-Two">
+        <Carousel />
+
+        </div>
       <div className="Section-Three">
         <div className="why">
           <div className="content">
