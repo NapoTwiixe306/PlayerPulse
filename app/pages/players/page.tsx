@@ -6,10 +6,7 @@ const PlayersPage: React.FC = () => {
   const router = useRouter();
 
   const handleCreateSlugAndRedirect = () => {
-    // Générez un slug de manière dynamique (peut-être en utilisant une logique spécifique à votre application)
-    const generatedSlug = "nouveau-slug"; // Remplacez cela par votre logique de génération de slug
-
-    // Redirigez vers la nouvelle page avec le slug généré
+    const generatedSlug = "nouveau-slug";
     router.push(`/pages/players/${generatedSlug}`);
   };
 
