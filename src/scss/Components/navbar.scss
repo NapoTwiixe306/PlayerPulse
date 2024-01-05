@@ -87,37 +87,43 @@
       width: 100%;
       background-color: #1a1a1a62;
       padding: 10px;
+      
     }
   }
   
   .team-link {
     position: relative;
-    a{
+    a, p{
       cursor: pointer;
     }
+    
   }
-
   .team-list {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #1a1a1a62;
+    background-color: #1a1a1a;
     padding: 10px;
     display: none;
-
+    width: 500px; // Ajustez la largeur de la liste selon vos besoins
+  
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      
+      display: flex;
+      flex-wrap: wrap; // Permet aux éléments de passer à la ligne en cas de manque d'espace
+      gap: 10px;
       li {
-        margin-bottom: 5px;
-        
+        margin-bottom: 10px;
+        flex-basis: calc(33.33% - 10px); // Pour obtenir environ 3 colonnes avec un espace de 10px entre elles
+        box-sizing: border-box;
         a {
           color: white;
           text-decoration: none;
           cursor: pointer;
           
+  
           &:hover {
             color: #ccc;
           }
@@ -125,8 +131,9 @@
       }
     }
   }
-
+  
   .team-link:hover .team-list {
     display: block;
   }
+  
 }

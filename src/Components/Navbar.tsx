@@ -1,18 +1,17 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { List_Navbar } from "../ListText/List_Navbar";
 import search from "../img/icons/searc.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import {Teams} from "../ListText/Teams";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showTeamList, setShowTeamList] = useState(false);
 
-  const teams = ["Vitality", "KCorp", "BDS"]; 
   const router = useRouter();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -25,6 +24,7 @@ export default function Navbar() {
   const toggleTeamList = () => {
     setShowTeamList(!showTeamList);
   };
+
   const navigateToTeam = (team: string) => {
     router.push(`/pages/team/${team.toLowerCase()}`);
     setShowTeamList(false);
@@ -48,30 +48,29 @@ export default function Navbar() {
           <div className={`items ${showMenu ? "open" : ""}`}>
             <Link href="/pages/players">{List_Navbar[1].items}</Link>
             <div
-            onMouseEnter={toggleTeamList}
-            onMouseLeave={toggleTeamList}
-            className="team-link"
-          >
-            <Link href="/pages/team">{List_Navbar[2].items}</Link>
-            {showTeamList && (
-              <div className="team-list">
-                <ul>
-                  {teams.map((team, index) => (
-                    <li key={index} onClick={() => navigateToTeam(team)}>
-                      <a>{team}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+              onMouseEnter={toggleTeamList}
+              onMouseLeave={toggleTeamList}
+              className="team-link"
+            >
+              <p>{List_Navbar[2].items}</p>
+              {showTeamList && (
+                <div className="team-list">
+                  <ul>
+                    {Teams.map((team, index) => (
+                      <li key={index} onClick={() => navigateToTeam(team)}>
+                        <a>{team}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
             <Link href="/pages/events">{List_Navbar[3].items}</Link>
             <Link href="/pages/contact">{List_Navbar[4].items}</Link>
             <Link href="/auth/login">Login</Link>
             <Link href="/auth/register">Register</Link>
           </div>
           <div className="icons">
-           
             {showSearch && (
               <div className="input ">
                 <input type="search" name="" id="" placeholder="Search" />
