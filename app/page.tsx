@@ -14,22 +14,21 @@ export default function page() {
       </div>
       <div className="Section-Two">
         <Carousel />
-
-        </div>
+      </div>
       <div className="Section-Three">
         <div className="why">
           <div className="content">
             <h1>{Home_Text[1].why}</h1>
             <div className="list">
               <ul>
-              {Home_Text.slice(2, 6).map((text, index) => (
-                <li key={index}>{text.list}</li>
-              ))}
+                {Home_Text.slice(2, 6).map((text, index) => (
+                  <li key={index}>{text.list}</li>
+                ))}
               </ul>
               <ul>
-              {Home_Text.slice(6, 9).map((text, index) => (
-                <li key={index}>{text.list}</li>
-              ))}
+                {Home_Text.slice(6, 9).map((text, index) => (
+                  <li key={index}>{text.list}</li>
+                ))}
               </ul>
             </div>
           </div>

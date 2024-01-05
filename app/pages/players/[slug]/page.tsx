@@ -1,5 +1,5 @@
-'use client'
-import { usePathname } from 'next/navigation';
+"use client";
+import { usePathname } from "next/navigation";
 
 const TeamPage = () => {
   const pathname = usePathname();
@@ -15,6 +15,6 @@ const TeamPage = () => {
 export default TeamPage;
 
 const extractTeamNameFromPathname = (pathname: string): string => {
-  const parts = pathname.split('/');
+  const parts = pathname.split("/");
   return parts[parts.length - 1];
 };

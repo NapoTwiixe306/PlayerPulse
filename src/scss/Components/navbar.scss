@@ -87,16 +87,15 @@
       width: 100%;
       background-color: #1a1a1a62;
       padding: 10px;
-      
     }
   }
-  
+
   .team-link {
     position: relative;
-    a, p{
+    a,
+    p {
       cursor: pointer;
     }
-    
   }
   .team-list {
     position: absolute;
@@ -105,8 +104,8 @@
     background-color: #1a1a1a;
     padding: 10px;
     display: none;
-    width: 500px; 
-  
+    width: 500px;
+
     ul {
       list-style: none;
       padding: 0;
@@ -122,8 +121,7 @@
           color: white;
           text-decoration: none;
           cursor: pointer;
-          
-  
+
           &:hover {
             color: #ccc;
           }
@@ -131,9 +129,8 @@
       }
     }
   }
-  
+
   .team-link:hover .team-list {
     display: block;
   }
-  
 }

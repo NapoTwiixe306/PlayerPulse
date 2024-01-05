@@ -4,5 +4,4 @@ export const List_Navbar = [
   { items: "Equipes" },
   { items: "Événements" },
   { items: "Contact" },
-  
 ];

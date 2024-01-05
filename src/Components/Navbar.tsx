@@ -5,7 +5,7 @@ import search from "../img/icons/searc.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import {Teams} from "../ListText/Teams";
+import { Teams } from "../ListText/Teams";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
