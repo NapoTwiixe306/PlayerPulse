@@ -201,7 +201,8 @@ body {
     display: none; }
 
   .Home_Container .title h1 {
-    width: 100%; }
+    width: 100%;
+    font-size: 20px; }
 
   .Section-Three .why .content .list {
     flex-direction: column; }
